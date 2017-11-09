@@ -1,0 +1,166 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.mockupProposal.controller.Page1" xmlns:m="sap.m"
+	xmlns:variants="sap.ui.comp.variants" xmlns:filterbar="sap.ui.comp.filterbar" xmlns:core="sap.ui.core">
+	<m:DynamicPage headerExpanded="true" showFooter="false" class="sapUiSizeCompact">
+		<m:title>
+			<m:DynamicPageTitle>
+				<m:heading>
+					<variants:VariantManagement/>
+				</m:heading>
+			</m:DynamicPageTitle>
+		</m:title>
+		<m:header>
+			<m:DynamicPageHeader pinnable="false">
+				<m:content>
+					<filterbar:FilterBar showFilterConfiguration="false" useToolbar="false" showGoOnFB="false" searchEnabled="false">
+						<filterbar:filterItems>
+							<filterbar:FilterItem label="Ramp"
+								name="Fiori_ListReport_ListReport_0-filterBars-Fiori_ListReport_FilterBar-1-filters-Fiori_ListReport_ComboBoxFilter-1510185615216---0">
+								<filterbar:control>
+									<m:MultiComboBox>
+										<m:items>
+											<core:Item key="" text=""/>
+										</m:items>
+									</m:MultiComboBox>
+								</filterbar:control>
+							</filterbar:FilterItem>
+							<filterbar:FilterItem label="Zone"
+								name="Fiori_ListReport_ListReport_0-filterBars-Fiori_ListReport_FilterBar-1-filters-Fiori_ListReport_ComboBoxFilter-1510185633275---0">
+								<filterbar:control>
+									<m:MultiComboBox>
+										<m:items>
+											<core:Item key="" text=""/>
+										</m:items>
+									</m:MultiComboBox>
+								</filterbar:control>
+							</filterbar:FilterItem>
+							<filterbar:FilterItem label="City, Province"
+								name="Fiori_ListReport_ListReport_0-filterBars-Fiori_ListReport_FilterBar-1-filters-Fiori_ListReport_ComboBoxFilter-1510185636179---0">
+								<filterbar:control>
+									<m:MultiComboBox>
+										<m:items>
+											<core:Item key="" text=""/>
+										</m:items>
+									</m:MultiComboBox>
+								</filterbar:control>
+							</filterbar:FilterItem>
+						</filterbar:filterItems>
+					</filterbar:FilterBar>
+				</m:content>
+			</m:DynamicPageHeader>
+		</m:header>
+		<m:content>
+			<m:VBox fitContainer="true">
+				<m:items>
+					<m:Table width="100%" growing="true" growingScrollToLoad="true" growingThreshold="25" mode="MultiSelect"
+						updateFinished="_onFioriListReportTableUpdateFinished">
+						<m:headerToolbar>
+							<m:OverflowToolbar design="Transparent">
+								<m:content>
+									<m:Title textAlign="Begin" text="Objects"/>
+									<m:Title text="(1)"/>
+									<m:ToolbarSpacer/>
+									<m:Button text="Edit" iconFirst="false" type="Transparent">
+										<m:layoutData>
+											<m:OverflowToolbarLayoutData moveToOverflow="true"/>
+										</m:layoutData>
+									</m:Button>
+									<m:Button text="Save" iconFirst="false" type="Transparent">
+										<m:layoutData>
+											<m:OverflowToolbarLayoutData moveToOverflow="true"/>
+										</m:layoutData>
+									</m:Button>
+									<m:Button text="Delete" enabled="false" iconFirst="false" type="Transparent">
+										<m:layoutData>
+											<m:OverflowToolbarLayoutData moveToOverflow="true"/>
+										</m:layoutData>
+									</m:Button>
+									<m:Button text="" icon="sap-icon://add" iconFirst="true" type="Transparent">
+										<m:layoutData>
+											<m:OverflowToolbarLayoutData moveToOverflow="true"/>
+										</m:layoutData>
+									</m:Button>
+								</m:content>
+							</m:OverflowToolbar>
+						</m:headerToolbar>
+						<m:columns>
+							<m:Column width="auto" minScreenWidth="Phone">
+								<m:header>
+									<m:Text text="RAMP" width="auto"/>
+								</m:header>
+							</m:Column>
+							<m:Column width="auto" minScreenWidth="Tablet" demandPopin="true">
+								<m:header>
+									<m:Text text="Zone" width="auto"/>
+								</m:header>
+							</m:Column>
+							<m:Column width="auto" minScreenWidth="Tablet" demandPopin="true">
+								<m:header>
+									<m:Text text="City, Prov" width="auto"/>
+								</m:header>
+							</m:Column>
+							<m:Column width="auto" hAlign="Left" minScreenWidth="Phone">
+								<m:header>
+									<m:Text text="Distance" width="auto"/>
+								</m:header>
+							</m:Column>
+							<m:Column width="auto" hAlign="Left" minScreenWidth="Phone">
+								<m:header>
+									<m:Text text="Transit Time" width="auto"/>
+								</m:header>
+							</m:Column>
+							<m:Column width="auto" hAlign="Left" minScreenWidth="Phone">
+								<m:header>
+									<m:Text text="PU Buffer" width="auto"/>
+								</m:header>
+							</m:Column>
+							<m:Column width="auto" hAlign="Left" minScreenWidth="Phone">
+								<m:header>
+									<m:Text text="DEL Buffer" width="auto"/>
+								</m:header>
+							</m:Column>
+							<m:Column width="auto" hAlign="Left" minScreenWidth="Phone">
+								<m:header>
+									<m:Text text="DEST Terminal HT" width="auto"/>
+								</m:header>
+							</m:Column>
+						</m:columns>
+						<m:items>
+							<m:ColumnListItem type="Active">
+								<m:cells>
+									<m:ObjectIdentifier title="CGY" text=""/>
+									<m:ObjectStatus text="1" width="auto"/>
+									<m:ObjectStatus text="Airdrie, AB" width="auto"/>
+									<m:HBox alignItems="Stretch" justifyContent="End" alignContent="Stretch">
+										<m:items>
+											<m:ObjectNumber number="50.00" unit="MI" emphasized="false"/>
+										</m:items>
+									</m:HBox>
+									<m:HBox alignItems="Stretch" justifyContent="End" alignContent="Stretch">
+										<m:items>
+											<m:ObjectNumber number="3,600.00" unit="secs" emphasized="false"/>
+										</m:items>
+									</m:HBox>
+									<m:HBox alignItems="Stretch" justifyContent="End" alignContent="Stretch">
+										<m:items>
+											<m:ObjectNumber number="3,600.00" unit="secs" emphasized="false"/>
+										</m:items>
+									</m:HBox>
+									<m:HBox alignItems="Stretch" justifyContent="End" alignContent="Stretch">
+										<m:items>
+											<m:ObjectNumber number="3,600.00" unit="secs" emphasized="false"/>
+										</m:items>
+									</m:HBox>
+									<m:HBox alignItems="Stretch" justifyContent="End" alignContent="Stretch">
+										<m:items>
+											<m:ObjectNumber number="18,000.00" unit="secs" emphasized="false"/>
+										</m:items>
+									</m:HBox>
+								</m:cells>
+							</m:ColumnListItem>
+						</m:items>
+					</m:Table>
+				</m:items>
+			</m:VBox>
+		</m:content>
+	</m:DynamicPage>
+</mvc:View>
